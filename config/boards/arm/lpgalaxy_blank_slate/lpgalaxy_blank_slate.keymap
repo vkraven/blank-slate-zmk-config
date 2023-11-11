@@ -44,6 +44,26 @@
             key-positions = <14 21 30>;
             bindings = <&nsl_nixshell>;
         };
+        combo_ncl {
+            timeout-ms = <40>;
+            key-positions = <21 27 30>;
+            bindings = <&ncl_nixchannel>;
+        };
+        combo_ndv {
+            timeout-ms = <40>;
+            key-positions = <15 28 30>;
+            bindings = <&ndv_nixdevelop>;
+        };
+        combo_jdot {
+            timeout-ms = <40>;
+            key-positions = <19 33>;
+            bindings = <&jdot_arrow>;
+        };
+        combo_jcomma {
+            timeout-ms = <40>;
+            key-positions = <19 32>;
+            bindings = <&jcomma_arrow>;
+        };
     };
 
     macros {
@@ -62,12 +82,36 @@
         tap-ms = <5>;
         bindings = <&kp DOT &kp DOT &kp FSLH>;
       )
+      ZMK_MACRO(jdot_arrow,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp MINUS &kp GT>;
+      )
+      ZMK_MACRO(jcomma_arrow,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp LT &kp MINUS>;
+      )
       ZMK_MACRO(nsl_nixshell,
         wait-ms = <1>;
         tap-ms = <5>;
         bindings = <&kp N &kp I &kp X
         &kp MINUS &kp S &kp H &kp E &kp L &kp L
         &kp SPACE &kp MINUS &kp P>;
+      )
+      ZMK_MACRO(ndv_nixdevelop,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp N &kp I &kp X
+        &kp SPACE &kp D &kp E &kp V &kp E &kp L
+        &kp O &kp P>;
+      )
+      ZMK_MACRO(ncl_nixchannel,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp N &kp I &kp X
+        &kp MINUS &kp C &kp H &kp A &kp N &kp N
+        &kp E &kp L>;
       )
     };
     
