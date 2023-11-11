@@ -37,6 +37,15 @@
 #endif
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_nsl {
+            timeout-ms = <40>;
+            key-positions = <14 21 30>;
+            bindings = <&nsl_nixshell>;
+        };
+    };
+
     macros {
       ZMK_MACRO(thumbs_up,
 		wait-ms = <1>;
@@ -52,6 +61,13 @@
         wait-ms = <1>;
         tap-ms = <5>;
         bindings = <&kp DOT &kp DOT &kp FSLH>;
+      )
+      ZMK_MACRO(nsl_nixshell,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp N &kp I &kp X
+        &kp MINUS &kp S &kp H &kp E &kp L &kp L
+        &kp SPACE &kp MINUS &kp P>;
       )
     };
     
