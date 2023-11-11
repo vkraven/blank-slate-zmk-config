@@ -43,6 +43,16 @@
 		tap-ms = <5>;
                 bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
 		)
+      ZMK_MACRO(dot_slash,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp DOT &kp FSLH>;
+      )
+      ZMK_MACRO(dot_dot_slash,
+        wait-ms = <1>;
+        tap-ms = <5>;
+        bindings = <&kp DOT &kp DOT &kp FSLH>;
+      )
     };
     
     tap_dances {
@@ -126,7 +136,7 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &trans
+&trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &dot_slash &dot_dot_slash
 &trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
 &trans     &kp TILDE  &kp EXCL   &kp LS(LC(C)) &kp LS(LC(V)) &kp PIPE  &trans     &trans    &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
